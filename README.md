@@ -22,7 +22,7 @@ Open a browser and navigate to http://localhost:3000 to interact with GraphiQL.
 
 If you installed Postgres from https://github.com/mnrm/docker-postgres, there is a sample `users` database table and you can execute the following query as a test:
 
-```json
+```js
 {
   allUsers {
     edges {
