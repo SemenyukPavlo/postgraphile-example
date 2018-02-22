@@ -34,8 +34,13 @@ app.get("/", (req, res) => {
 // graphql endpoint.
 app.post("/graphql", (req, res) => {
   const query = req.body.query;
-  const databaseURL = process.env.DATABASE_CONNECTION_STRING;
   const databaseSchemaName = process.env.DATABASE_SCHEMA;
+  const databaseURL = process.env.DATABASE_CONNECTION_STRING;
+  if (!databaseURL) {
+    throw new Error(
+      "Define a DATABASE_CONNECTION_STRING in an .env file. See env.example."
+    );
+  }
   graphql(query, databaseURL, databaseSchemaName)
     .then(result => {
       res.json(result);
