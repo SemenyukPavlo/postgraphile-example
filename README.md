@@ -1,5 +1,7 @@
 # Postgraphile Example
 
+A basic [Postgrahile](https://www.graphile.org/postgraphile/) example the use of HTTP middleware so that it can work, with modification, on serverless hosts like AWS Lambda or Azure Functions.
+
 ## Installation
 
 1. `git clone https://github.com/mnrm/postgraphile-example.git`
